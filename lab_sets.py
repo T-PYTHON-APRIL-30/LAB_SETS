@@ -48,12 +48,17 @@ unilever_cities = set()
 unilever_cities = {"Saudi Arabia", "Kuwait",
                    "Iraq", "Morocco", "Yemen", "United Emirates"}
 all_cities = nestle_cities | unilever_cities
-print(all_cities)
+print("all cities: ")
+for i in all_cities:
+    print(i,end=" ")
 
 # Using Sets & a loop, print the cities that both Nestle & Unilver sell in common.
 incommon_cities = nestle_cities & unilever_cities
-print(incommon_cities)
-
+print("\nin common cities: ")
+for i in incommon_cities:
+    print(i,end=" ")
 # Using Sets & a loop, print the cities Nestle sells in , but Unilver doens't sell in.
 nestle_cities_only = nestle_cities-unilever_cities
-print(nestle_cities_only)
+print("\nnestle cities without including unilever cities: ")
+for i in nestle_cities_only:
+    print(i,end=" ")

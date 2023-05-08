@@ -1,0 +1,64 @@
+
+# Create a variable to hold the values of Nestle and Unilever products (use a dicitionary)
+nestle_products = {
+    "KitKat": 34456432,
+    "Nescafe": 14106132,
+    "Maggi": 9960312,
+    "Nido": 44506003
+}
+
+unilever_products = {
+    "Lipton": 23456000,
+    "Breyers": 1235891,
+    "HellManns": 17241412,
+    "Marmite": 11715324
+}
+
+# The countries in which Nestle & Unilever sell the products:
+nestle_cities = {"Saudi Arabia", "Oman", "Kuwait", "Egypt", "Jordan", "Sudan"}
+unilever_cities = {"Saudi Arabia", "Kuwait", "Iraq", "Morocco", "Yemen", "United Emirates"}
+
+# Print each product sold by Nestle and Unilever and the sales figures / numbers  for that product.
+print("Nestle products:")
+for product, sales in nestle_products.items():
+    print(product, ":", sales, "US Dollars")
+
+print("\nUnilever products:")
+for product, sales in unilever_products.items():
+    print(product, ":", sales, "US Dollars")
+
+# Print which of the companies has more products than the other company.
+if len(nestle_products) > len(unilever_products):
+    print("\nNestle has more products")
+elif len(nestle_products) < len(unilever_products):
+    print("\nUnilever has more products")
+else:
+    print("\nboth have the same amount of products")
+
+# Print the top selling product from Nestle and Unilever with sales figures.
+top_selling_nestle = max(nestle_products, key = nestle_products.get)
+print("\ntop selling product from Nestle:", top_selling_nestle, "with:", nestle_products[top_selling_nestle], "US Dollars")
+
+top_selling_unilever = max(unilever_products, key = unilever_products.get)
+print("\ntop selling product from Nestle Unilever:", top_selling_unilever, "with:", unilever_products[top_selling_unilever], "US Dollars")
+
+# Using Sets & a loop, print all the cities Nestle & Unilever sell their products in.
+print("\ncities Nestle sell their products in:")
+for city in nestle_cities:
+    print(city)
+
+print("\ncities Unilever sell their products in:")
+for city in unilever_cities:
+    print(city)
+
+# Using Sets & a loop, print the cities that both Nestle & Unilver sell in common.
+common_cities = unilever_cities.intersection(nestle_cities)
+print("\ncities that both Nestle & Unilver sell in common:")
+for city in common_cities:
+    print(city)
+
+# Using Sets & a loop, print the cities Nestle sells in, but Unilver doens't sell in.
+nestle_only = nestle_cities.difference(unilever_cities)
+print("\ncities Nestle sells in, but Unilver doens't sell in:")
+for city in nestle_only:
+    print(city)

@@ -54,10 +54,12 @@ for product , sales in nestleSales.items():
 # Print which of the companies has more products that the other company.
 print()
 print("---------- More products company ----------")
-if unileverTotalSales > nestleTotalSales :
-    print(f"Unilever sales are more than Nestle, with total sales {unileverTotalSales} US Dollars.")
-elif nestleTotalSales > unileverTotalSales :
-    print(f"Nestle sales are more than Unilever, with total sales {nestleTotalSales} US Dollars.")
+if len(unileverSales) > len(nestleSales) :
+    print("Unilever has more products than Nestle.")
+elif len(nestleSales) > len(unileverSales) :
+    print("Nestle has more products than Unilever.")
+elif len(nestleSales) == len(unileverSales) :
+    print("Nestle & Unilever are has the same number of products.")
 
 # Print the top selling product from Nestle with sales figures.
 print()

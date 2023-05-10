@@ -25,10 +25,13 @@ Dalia_sales_of_unilever  = {
 
 currncy="US Dollars"
 
-print(kate_sales_of_Nastle)
+for name in Dalia_sales_of_unilever:
+    print(name,end=" ")
+    print(Dalia_sales_of_unilever[name],currncy)
 print("--"*14)
-
-print(Dalia_sales_of_unilever)
+for names in kate_sales_of_Nastle:
+    print(names, end=" ")
+    print(kate_sales_of_Nastle[names],currncy)
 print("--"*14)
 
 #Print the top selling product from Nestle

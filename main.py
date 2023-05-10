@@ -54,8 +54,22 @@ disply_top(nestle_products)
 print("The top selling product from Unilever:")
 disply_top(unilever_products)
 
-print(f"All cities that Unilever and Nestle selling their products in:\n {unilever_countries | nestle_countries}")
+union = unilever_countries | nestle_countries
+intersection = unilever_countries & nestle_countries
+difference = nestle_countries - unilever_countries
+
+print("All cities that Unilever and Nestle selling their products in:")
+for country in union:
+    print(country)
+
+
 print("\n")
-print(f"Unilever and Nestle sell their products in:\n {unilever_countries & nestle_countries}")
+print("Unilever and Nestle sell their products in:")
+for country in intersection:
+    print(country)
+
+
 print("\n")
-print(f"Cities that Nestle sells in, but Unilver doens't sell in:\n {nestle_countries - unilever_countries}")
+print("Cities that Nestle sells in, but Unilver doens't sell in:")
+for country in difference:
+    print(country)

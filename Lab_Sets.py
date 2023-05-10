@@ -63,6 +63,19 @@ def best_seling_products(company1 : dict,company2: dict)->dict:
     elif sum2 > sum1:
         return company2
     
+def comparing_element(company1:dict,company2:dict):
+    length1= len(company1)
+    lenght2=len(company2)
+    if length1>lenght2:
+        return company1
+    elif lenght2>length1:
+        return company2
+    
+if comparing_element(Nestle_products,Unilever_products) == Nestle_products:
+    print(f"The company ha more element is: Nestle")
+else:
+    print("The company ha more element is: Unilever")
+    
 if best_seling_products(Nestle_products,Unilever_products) == Nestle_products:
     print(f"The company has more products is: Nestle")
 else:

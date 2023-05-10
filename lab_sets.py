@@ -18,10 +18,12 @@ Unilever = {
 }
 
 # Print each product sold by Nestle and the sales figures / numbers  for that product.
-print(Nestle)
+for i in Nestle:
+    print(f"Nestle products: {i}: {Nestle[i]} US dollars")
 
 # Print each product sold by Unilever and the sales figures / numbers  for that product.
-print(Unilever)
+for i in Unilever:
+    print(f"Unilever products: {i}: {Unilever[i]} US dollars")
 
 # Print which of the companies has more products that the other company.
 if Unilever.__len__() > Nestle.__len__():
@@ -50,15 +52,15 @@ unilever_cities = {"Saudi Arabia", "Kuwait",
 all_cities = nestle_cities | unilever_cities
 print("all cities: ")
 for i in all_cities:
-    print(i,end=" ")
+    print(i, end=" ")
 
 # Using Sets & a loop, print the cities that both Nestle & Unilver sell in common.
 incommon_cities = nestle_cities & unilever_cities
 print("\nin common cities: ")
 for i in incommon_cities:
-    print(i,end=" ")
+    print(i, end=" ")
 # Using Sets & a loop, print the cities Nestle sells in , but Unilver doens't sell in.
 nestle_cities_only = nestle_cities-unilever_cities
 print("\nnestle cities without including unilever cities: ")
 for i in nestle_cities_only:
-    print(i,end=" ")
+    print(i, end=" ")

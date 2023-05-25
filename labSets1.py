@@ -49,6 +49,10 @@ cities_Unilever = {"Saudi Arabia", "Kuwait", "Iraq", "Morocco", "Yemen", "United
 for key in cities_Unilever:
     print(key)
 #11Using Sets & a loop, print the cities that both Nestle & Unilver sell in common.
-print(cities_Nestle & cities_Unilever)
+c = (cities_Nestle & cities_Unilever)
+for i in  c:
+   print(i)
 #12Using Sets & a loop, print the cities Nestle sells in , but Unilver doens't sell in.
-print(cities_Nestle - cities_Unilever)
+c=(cities_Nestle - cities_Unilever)
+for i in  c:
+   print(i)
